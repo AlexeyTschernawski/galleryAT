@@ -1,0 +1,123 @@
+/* Общие стили */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('./img/dunkelLeft.jpg');
+    background-size: cover; /* Используем cover для заполнения всей области */
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Минимальная высота экрана */
+    display: flex;
+    flex-direction: column; /* Контент будет располагаться в столбец */
+    overflow-x: hidden;
+    background-attachment: fixed;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #e7dede;
+    font-size: 18px;
+    text-align: center;
+    text-shadow: 0 1px 3px rgba(8, 8, 8, 0.3);
+}
+
+/* Стили для верхней навигации */
+.top-nav {
+    background-color: rgba(255, 153, 0, 0.4); /* Прозрачный черный фон */
+    padding: 18px;
+    position: relative; /* позиционирование: чтобы элементы могли перекрывать фон */
+    z-index: 1; /* нави над фоновым коллажем */
+    display: flex; /* Располагаем элементы в одной линии */
+    justify-content: space-between; /* Равномерное распределение элементов по ширине */
+    align-items: center; /* Выравниваем элементы по вертикали */
+}
+
+.top-nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.naviicon img {
+    overflow: hidden;
+    height: 18px;
+    width: 21px;
+    margin-right: 10px; /* Меняем margin-left на margin-right */
+}
+
+.top-nav li {
+    margin: 0 15px;
+}
+
+/* Стили для нижней навигации */
+.bottom-nav {
+    background-color: rgba(0, 0, 0, 0.5); /* Прозрачный черный фон */
+    padding: 10px 0;
+    margin-top: auto; /* Верхнее положение прижимается к низу */
+    z-index: 1; /* Поместим навигацию над фоновым коллажем */
+}
+
+.bottom-nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+.bottom-nav li {
+    margin: 0 10px;
+}
+
+.header{
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.0); /* Пример полупрозрачного фона */
+        padding: 20px 0;
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+.centered-text {
+    text-align: left;
+    margin-left: 45%;
+    margin-right: 5%;
+    padding-top: 100px; /* Отступ сверху */
+}
+
+.centered-text h1 {
+    
+    font-size: 70px; /* Размер шрифта заголовка */
+    color:#d87410;; /* Цвет текста */
+}
+
+.centered-text p {
+    font-size: 25px; /* Размер шрифта параграфа */
+    color: #ecbb89; /* Цвет текста */
+    line-height: 1.5; /* Межстрочный интервал */
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(41, 39, 39, 0.0); /* Пример полупрозрачного фона */
+    padding: 10px 0;
+    text-align: center; /* Выравниваем текст по центру */
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.bottom-nav a {
+    font-size: 12px; /* Размер шрифта для текста ссылок в нижней навигации */
+    color: #FFFFFF; /* Цвет текста ссылок */
+}

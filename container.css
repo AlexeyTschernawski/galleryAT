@@ -1,0 +1,141 @@
+/* container.css */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 90px auto 90px; /* 90px отступ сверху и снизу */
+    padding: 55px;
+     
+    box-sizing: border-box;
+    z-index: 1; /* z-index ниже, чем у header, footer и pagination */
+    position: relative;
+    
+}
+
+.item {
+    width: calc(25% - 20px); /* 25% ширины контейнера минус отступ */
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.item img {
+    max-width: 100%;
+    height: auto;
+    transition: filter 0.3s ease;
+}
+
+
+
+/* container.css */
+@media (max-width: 1200px) {
+    .item {
+        width: calc(33.33% - 20px); /* 3 столбца */
+    }
+}
+
+@media (max-width: 992px) {
+    .item {
+        width: calc(50% - 20px); /* 2 столбца */
+    }
+}
+
+@media (max-width: 768px) {
+    .item {
+        width: calc(100% - 20px); /* 1 столбец */
+    }
+}
+
+
+.item:hover img {
+    filter: brightness(50%);
+}
+
+.description {
+    background-color: rgba(0, 0, 0, 0.5);
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.item:hover .description {
+    opacity: 1;
+}
+
+/* modal window */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    margin: 10% auto;
+    padding: 80px;
+    max-width: 700px;
+    background-color: #e2cccc;
+    border-radius: 10px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.modal-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+.pagination {
+    text-decoration: none;
+    color: #0e0d0d;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    text-shadow: 0 1px 3px rgba(105, 28, 28, 0.3);
+    
+    padding: 15px 0;
+    width: 100%;
+    z-index: 999; /* ensure it's above the main content but below header and footer */
+}
+
+.pagination button,
+.pagination span#pageCounter {
+    text-decoration: none;
+    color: #928f8f;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: 0 1px 3px rgba(8, 8, 8, 0.3);
+}
+
+.pagination.top-navigation {
+    position: fixed;
+    top: calc(60px + 20px); /* 60px высота header + 20px отступ */
+    left: 0;
+}
+
+.pagination.bottom-navigation {
+    position: fixed;
+    bottom: calc(60px + 20px); /* 60px высота footer + 20px отступ */
+    left: 0;
+}

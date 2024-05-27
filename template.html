@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Художественная галерея</title>
+    <link rel="stylesheet" href="./1_page.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const currentLocation = window.location.pathname.split("/").pop();
+            const navLinks = document.querySelectorAll(".top-nav ul li a");
+
+            navLinks.forEach(link => {
+                if (link.getAttribute("href") === currentLocation) {
+                    link.classList.add("active");
+                }
+            });
+
+            document.getElementById("emailIcon").addEventListener("click", function() {
+                document.getElementById("emailModal").style.display = "block";
+            });
+
+            document.querySelector(".close").addEventListener("click", function() {
+                document.getElementById("emailModal").style.display = "none";
+            });
+
+            // Close the modal if user clicks outside of it
+            window.addEventListener("click", function(event) {
+                if (event.target == document.getElementById("emailModal")) {
+                    document.getElementById("emailModal").style.display = "none";
+                }
+            });
+        });
+    </script>
+    <style>
+        .active {
+            pointer-events: none;
+            color: grey;
+        }
+
+        .naviicon a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+    <nav class="top-nav">
+        <div class="naviicon">
+            <a href="index.html"><img src="./img/home-4-32.gif" alt="home"></a>
+            <img id="emailIcon" src="./img/email-32.png" alt="email" style="cursor: pointer;">
+            <a href="phone.html"><img src="./img/phone-32.gif" alt="phone"></a>
+        </div>
+        <ul>
+            <li><a href="biography.html">biography</a></li>
+            <li><a href="pictures.html">pictures</a></li>
+            <li><a href="drawings.html">drawings</a></li>
+            <li><a href="archive.html">archive</a></li>
+            <li><a href="purchase.html">purchase</a></li>
+        </ul>
+    </nav> 
+</header>
+
+<!-- Email Modal -->
+<div id="emailModal" style="display:none; position: fixed; z-index: 1000; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 400px; padding: 20px; background-color: white; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);">
+    <div style="display: flex; justify-content: flex-end;">
+        <span class="close" style="cursor: pointer;">&times;</span>
+    </div>
+    <form action="send_email.php" method="post">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+        </div>
+        <div style="margin-top: 10px;">
+            <button type="submit">Send</button>
+        </div>
+    </form>
+</div>
+
+<footer class="footer">
+    <nav class="bottom-nav">
+        <ul>
+            <li><a href="#">Поддержка</a></li>
+            <li><a href="#">Политика конфиденциальности</a></li>
+            <li><a href="#">Условия использования</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Связаться с нами</a></li>
+        </ul>
+    </nav>
+</footer>
+</body>
+</html>

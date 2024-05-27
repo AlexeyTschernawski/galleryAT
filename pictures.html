@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pictures - Michail Tschernjavski</title>
+    
+    
+    <link rel="stylesheet" href="./container.css">
+
+    <script src="./imageData.js" defer></script>
+    <script src="./modalPic.js" defer></script>
+    <script src="./template.js" defer></script>
+    
+</head>
+<body>
+    <div id="header"></div>
+
+    <div class="pagination top-navigation">
+        <button id="prevPageBtn"><<<</button>
+        <span id="pageCounter"></span>
+        <button id="nextPageBtn">>>></button>
+    </div>
+
+
+    <div class="container" id="imageContainer"></div>
+    
+
+        
+    <!-- modal window -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modal-img" src="" alt="zoom picture">
+            <div class="description">
+                <p> FULL description: ABOUT <span id="modal-description"></span></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
