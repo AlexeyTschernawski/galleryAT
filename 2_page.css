@@ -1,17 +1,21 @@
 /* Общие стили */
-body{
-    background-image: url('./img/dunkelLeft.jpg');
+body {
+    background: linear-gradient(#1c1717, #2b2827, #2e2411, #181514); /* Линейный градиент с разными оттенками коричневого */
     min-height: 100vh; /* Минимальная высота экрана */
     padding: 20px; /* Отступы */
-    background-size: cover; /* Используем cover для заполнения всей области */
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh; /* Минимальная высота экрана */
-    display: flex;
-    flex-direction: column; /* Контент будет располагаться в столбец */
-    overflow-x: hidden;
-    background-attachment: fixed;
+    background-size: cover; /* Заполняем всю область фоном */
+    background-position: center; /* Центрируем фон */
+    background-repeat: no-repeat; /* Отключаем повторение фона */
+    display: flex; /* Используем flexbox для контейнера */
+    flex-direction: column; /* Размещаем контент в столбец */
+    overflow-x: hidden; /* Отключаем горизонтальную прокрутку */
+    background-attachment: fixed; /* Закрепляем фон при прокрутке */
+    position: relative; /* Добавляем относительное позиционирование для использования псевдоэлемента */
 }
+
+
+
+
 
 
 
@@ -31,7 +35,7 @@ a {
 
 /* Стили для верхней навигации */
 .top-nav {
-    background-color: rgba(255, 153, 0, 0.4); 
+    background-color: rgb(144, 94, 19); /* Прозрачный черный фон */
     padding: 18px;
     position: relative; /* позиционирование: чтобы элементы могли перекрывать фон */
     z-index: 1; /* нави над фоновым коллажем */
@@ -85,7 +89,7 @@ a {
         background-color: rgba(0, 0, 0, 0.0); /* Пример полупрозрачного фона */
         padding: 20px 0;
         z-index: 1000;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
 
 }
 
@@ -116,7 +120,7 @@ a {
     padding: 10px 0;
     text-align: center; /* Выравниваем текст по центру */
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    
 }
 
 .bottom-nav a {

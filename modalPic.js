@@ -11,7 +11,7 @@ const modal = document.getElementById('modal');
         const pageCounterBottom = document.getElementById('pageCounterBottom');
 
 
-        const itemsPerPage = 8;
+        const itemsPerPage = 12;
         let currentPage = 0;
 
         //Функция изображений для текущей страницы

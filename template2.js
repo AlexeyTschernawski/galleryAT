@@ -1,7 +1,7 @@
 
         // Load the header template
         
-        fetch('template.html')
+        fetch('template2.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('header').innerHTML = data;

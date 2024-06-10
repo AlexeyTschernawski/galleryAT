@@ -1,0 +1,17 @@
+.float-left {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    max-width: 40%;
+}
+
+.float-right {
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    max-width: 40%;
+}
+
+p.clear {
+    clear: both;
+}
